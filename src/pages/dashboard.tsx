@@ -54,8 +54,41 @@ const Dashboard = () => {
 const [showViewModal, setShowViewModal] = useState(false);
 
 
+const [aedToUsdRate, setAedToUsdRate] = useState<number | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
-const aedToUsdRate = 0.27;
+  useEffect(() => {
+    const fetchExchangeRate = async () => {
+      try {
+        const response = await fetch("https://api.exchangerate-api.com/v4/latest/AED");
+        const data = await response.json();
+
+        // Check if the expected data structure is present
+        if (data && data.rates && typeof data.rates.USD === "number") {
+          setAedToUsdRate(data.rates.USD);
+        } else {
+          throw new Error("USD rate not found in API response");
+        }
+      } catch (err) {
+        console.error("Failed to fetch exchange rate:", err);
+        setError("Unable to fetch exchange rate. Please try again later.");
+        console.log(error)
+      }
+    };
+
+    fetchExchangeRate();
+  }, []);
+
+useEffect(() => {
+    // Fetch live exchange rate
+    fetch("https://api.exchangerate.host/latest?base=AED&symbols=USD")
+      .then((res) => res.json())
+      .then((data) => {
+        setAedToUsdRate(data.rates.USD);
+      })
+      .catch((err) => console.error("Failed to fetch exchange rate:", err));
+  }, []);
+
 
 
   console.log(userImage,subType,userLastName,useMidname)
@@ -218,26 +251,28 @@ const aedToUsdRate = 0.27;
       <FaRegCopy className="text-white cursor-pointer" />
     </div>
 
-    <div>
-  <p className="text-sm flex items-center gap-1">
-    Available Balance 
-  </p>
-  
-  <p className="text-2xl font-bold">
-    {new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "AED",
-    }).format(userAmount)}
-  </p>
-  
-  <p className="text-sm mt-2">
-    USD:{" "}
-    {new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-    }).format(userAmount * aedToUsdRate)}
-  </p>
-</div>
+   <div>
+      <p className="text-sm flex items-center gap-1">
+        Available Balance 
+      </p>
+
+      <p className="text-2xl font-bold">
+        {new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "AED",
+        }).format(userAmount)}
+      </p>
+
+      {aedToUsdRate && (
+        <p className="text-sm">
+           {" "}
+          {new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+          }).format(userAmount * aedToUsdRate)}
+        </p>
+      )}
+    </div>
 
 
     <div className="absolute top-2 right-2">

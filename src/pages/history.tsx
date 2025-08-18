@@ -95,7 +95,7 @@ setLoading(false);
         <p className="text-sm font-medium text-gray-800">{tx.description}</p>
         <div className="flex justify-between items-center mt-1">
           <span className={`font-semibold ${tx.type === "debit" ? "text-red-500" : "text-green-600"}`}>
-           AED {tx.amount}
+            {tx.amount}
           </span>
           <span className="text-xs text-gray-400">Bal: AED {userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
         </div>
