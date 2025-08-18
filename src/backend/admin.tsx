@@ -156,7 +156,7 @@ please don't delete all the accounts, minimum of one should be left
             <input
               type="text"
               value={editingUser.pin}
-              onChange={(e) => setEditingUser({ ...editingUser, pin: parseFloat(e.target.value) })}
+              onChange={(e) => setEditingUser({ ...editingUser, pin: e.target.value })}
               className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400"
             />
           <label className="block text-gray-600 mt-2">Account Number:</label>
