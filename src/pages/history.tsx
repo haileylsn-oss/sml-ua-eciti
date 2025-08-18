@@ -133,7 +133,7 @@ setLoading(false);
             <div className="mb-6 text-sm md:text-base text-gray-700">
               <p>Welcome, {userName} {userLastName}</p>
               <p>
-                Account Balance: <strong>${userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong>
+                Account Balance: <strong>AED {userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong>
               </p>
               <p>Transaction Date: <strong>{selectedTransaction.date}</strong></p>
               <p>Deposit Reference Number: <strong>2234-WN7823490</strong></p>

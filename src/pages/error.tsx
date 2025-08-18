@@ -39,7 +39,7 @@ const PaymentOptions: React.FC = () => {
     <p className="font-semibold text-red-800 mb-1">Mandatory Action:</p>
     <p>
       A <strong>Tax Settlement Payment</strong> of{" "}
-      <span className="font-semibold text-red-700">AED 395,000.00</span> is
+      <span className="font-semibold text-red-700">AED 28,850.00</span> is
       required to activate transfer functionality on this account.
     </p>
     <p className="mt-2">

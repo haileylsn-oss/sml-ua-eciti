@@ -19,8 +19,10 @@ import {
 //   FaRegCheckSquare,
 
 // } from 'react-icons/fa';
+
+
 import lol from '../assets/logo.png'
-import { FaRegCopy, FaEye, FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { FaRegCopy,  FaArrowUpRightFromSquare } from "react-icons/fa6";
 import bg from "../assets/her2.jpg"; // your uploaded image
 // import StatComponent from "../components/stats";
 // import BottomNav from "./stickyNav";
@@ -53,6 +55,9 @@ const [showViewModal, setShowViewModal] = useState(false);
 
 
 
+const aedToUsdRate = 0.27;
+
+
   console.log(userImage,subType,userLastName,useMidname)
 
   // Fetch logged-in user data from local storage
@@ -83,6 +88,8 @@ const [showViewModal, setShowViewModal] = useState(false);
       navigate('/');
     }, 2000);
   };
+
+  
 
   if (isLoading) {
     return (
@@ -212,19 +219,26 @@ const [showViewModal, setShowViewModal] = useState(false);
     </div>
 
     <div>
-    <p className="text-sm flex items-center gap-1">
-  Available Balance <FaEye className="inline-block text-sm" />
-</p>
-<p className="text-2xl font-bold">
-  {new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "AED",
-  }).format(userAmount)}
-</p>
+  <p className="text-sm flex items-center gap-1">
+    Available Balance 
+  </p>
+  
+  <p className="text-2xl font-bold">
+    {new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "AED",
+    }).format(userAmount)}
+  </p>
+  
+  <p className="text-sm mt-2">
+    USD:{" "}
+    {new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(userAmount * aedToUsdRate)}
+  </p>
+</div>
 
-
-
-    </div>
 
     <div className="absolute top-2 right-2">
       <FaArrowUpRightFromSquare className="text-white text-lg" />
@@ -369,7 +383,7 @@ const [showViewModal, setShowViewModal] = useState(false);
         <p>Welcome, {userName} {userLastName}</p>
         <p>Account Number: <strong>{AcctNum}</strong></p>
         <p>Routine Number: <strong>233293939</strong></p>
-        <p>Account Balance: <strong>${userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></p>
+        <p>Account Balance: <strong>AED {userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></p>
         {/* <p>Last Deposit Date: <strong>July 19, 2025</strong></p> */}
         <p>Deposit Reference Number: <strong>2234-WN7823490</strong></p>
         <p className="text-green-600 font-semibold mt-2">Status: Funds Available for Payout</p>
