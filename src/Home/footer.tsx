@@ -1,12 +1,20 @@
 import fc from '../assets/fdic.png';
 import cd from '../assets/ehl.png';
+import cd2 from '../assets/Emblem_of_the_United_Arab_Emirates.svg';
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 text-white py-10">
+    <footer className="bg-black text-white py-10">
+   <div className='flex justify-center'>
+    <img src={cd2} alt="" width={100} /> 
+     
+    </div>  
+     
+     
       <div className="container mx-auto flex flex-wrap gap-3 justify-evenly">
         {/* Company Info */}
+       
         <div>
           <p className="text-sm leading-relaxed w-[400px]">
             At Citi Bank UAE, we are committed to providing innovative banking solutions 
