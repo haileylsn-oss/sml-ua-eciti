@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaMapMarkerAlt, FaGlobe, FaSearch } from "react-icons/fa";
-import logo2 from "../assets/headlogo.jpg"; // Citi logo image
+import logo2 from "../assets/logo.png"; // Citi logo image
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         {/* Left: Logo + FDIC */}
         <div className="flex items-center space-x-4">
           <Link to="/">
-            <img src={logo2} alt="Logo"  />
+            <img src={logo2} alt="Logo" width="100" />
           </Link>
           {/* <div className="hidden md:block text-xs text-gray-700 leading-tight max-w-[250px]">
             <span className="font-bold">FDIC</span> Insured – Backed by the full
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
           </div>
           <div className="flex items-center space-x-1 cursor-pointer hover:text-blue-600">
             <FaGlobe size={14} />
-            <span>ESPAÑOL</span>
+            <span>Arabic (العربية)</span>
           </div>
           <Link to="/login">
             <button className="border-2 text-xs border-blue-900 text-blue-900 px-4 py-1 rounded-full hover:bg-blue-50">
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
         {/* Mobile Right Side */}
         <div className="flex items-center space-x-4 md:hidden">
           <Link to="/login">
-            <button className="border-2 text-xs border-blue-900 text-blue-900 px-3 py-1 rounded-full hover:bg-blue-50">
+            <button className="border-2 text-sm border-blue-900 text-blue-900 px-3 py-1 rounded-full hover:bg-blue-50">
               LOG-IN
             </button>
           </Link>
