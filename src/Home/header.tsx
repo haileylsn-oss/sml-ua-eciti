@@ -31,7 +31,7 @@ const Header: React.FC = () => {
           </div>
           <div className="flex items-center space-x-1 cursor-pointer hover:text-blue-600">
             <FaGlobe size={14} />
-            <span>Arabic (العربية)</span>
+            {/* <span>Arabic (العربية)</span> */}
           </div>
           <Link to="/login">
             <button className="border-2 text-xs border-blue-900 text-blue-900 px-4 py-1 rounded-full hover:bg-blue-50">
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
          
          <div className="flex items-center space-x-1 cursor-pointer hover:text-blue-600">
             <FaGlobe size={14} />
-            <span>(العربية)</span>
+            {/* <span>(العربية)</span> */}
           </div>
           
            <Link to="/login">

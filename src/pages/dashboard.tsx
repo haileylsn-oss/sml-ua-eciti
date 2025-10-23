@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import {  Link, useNavigate } from "react-router-dom";
- import ReactCountryFlag from "react-country-flag";
+//  import ReactCountryFlag from "react-country-flag";
 import { FaArrowAltCircleRight,    FaSearch } from 'react-icons/fa';
 import {
   // FaSyncAlt,
@@ -54,40 +54,40 @@ const Dashboard = () => {
 const [showViewModal, setShowViewModal] = useState(false);
 
 
-const [aedToUsdRate, setAedToUsdRate] = useState<number | null>(null);
-  const [error, setError] = useState<string | null>(null);
+// const [aedToUsdRate, setAedToUsdRate] = useState<number | null>(null);
+  // const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchExchangeRate = async () => {
-      try {
-        const response = await fetch("https://api.exchangerate-api.com/v4/latest/AED");
-        const data = await response.json();
+  // useEffect(() => {
+  //   const fetchExchangeRate = async () => {
+  //     try {
+  //       const response = await fetch("https://api.exchangerate-api.com/v4/latest/AED");
+  //       const data = await response.json();
 
-        // Check if the expected data structure is present
-        if (data && data.rates && typeof data.rates.USD === "number") {
-          setAedToUsdRate(data.rates.USD);
-        } else {
-          throw new Error("USD rate not found in API response");
-        }
-      } catch (err) {
-        console.error("Failed to fetch exchange rate:", err);
-        setError("Unable to fetch exchange rate. Please try again later.");
-        console.log(error)
-      }
-    };
+  //       // Check if the expected data structure is present
+  //       if (data && data.rates && typeof data.rates.USD === "number") {
+  //         setAedToUsdRate(data.rates.USD);
+  //       } else {
+  //         throw new Error("USD rate not found in API response");
+  //       }
+  //     } catch (err) {
+  //       console.error("Failed to fetch exchange rate:", err);
+  //       setError("Unable to fetch exchange rate. Please try again later.");
+  //       console.log(error)
+  //     }
+  //   };
 
-    fetchExchangeRate();
-  }, []);
+  //   fetchExchangeRate();
+  // }, []);
 
-useEffect(() => {
-    // Fetch live exchange rate
-    fetch("https://api.exchangerate.host/latest?base=AED&symbols=USD")
-      .then((res) => res.json())
-      .then((data) => {
-        setAedToUsdRate(data.rates.USD);
-      })
-      .catch((err) => console.error("Failed to fetch exchange rate:", err));
-  }, []);
+// useEffect(() => {
+//     // Fetch live exchange rate
+//     fetch("https://api.exchangerate.host/latest?base=AED&symbols=USD")
+//       .then((res) => res.json())
+//       .then((data) => {
+//         setAedToUsdRate(data.rates.USD);
+//       })
+//       .catch((err) => console.error("Failed to fetch exchange rate:", err));
+//   }, []);
 
 
 
@@ -180,10 +180,10 @@ useEffect(() => {
             <span className="text-[10px] mt-1" onClick={handleLogout}>Log Out</span>
           </div>
 
-<p className="flex items-center gap-2 text-sm mb-4">
+{/* <p className="flex items-center gap-2 text-sm mb-4">
   
   <ReactCountryFlag countryCode="AE" svg style={{ width: "1.5em", height: "1.5em" }} />
-</p>
+</p> */}
         </div>
       </div>
 
@@ -259,19 +259,19 @@ useEffect(() => {
       <p className="text-2xl font-bold">
         {new Intl.NumberFormat("en-US", {
           style: "currency",
-          currency: "AED",
+          currency: "USD",
         }).format(userAmount)}
       </p>
 
-      {aedToUsdRate && (
+      {/* {aedToUsdRate && (
         <p className="text-sm">
            {" "}
           {new Intl.NumberFormat("en-US", {
             style: "currency",
-            currency: "USD",
+            currency: "MXN",
           }).format(userAmount * aedToUsdRate)}
         </p>
-      )}
+      )} */}
     </div>
 
 
@@ -343,9 +343,9 @@ useEffect(() => {
         <div className="flex gap-2 items-center">
           <div><FaArrowAltCircleRight/></div>
           <div>
-  <p className="font-medium">Citi Bank UAE Life Plan®</p>
+  <p className="font-medium">Citi Bank  Life Plan®</p>
   <p className="text-sm text-gray-500">
-    Set and track your financial goals with personalized guidance in Dubai and across the UAE.
+    Set and track your financial goals with personalized guidance in USA and across North America.
   </p>
 </div>
 
@@ -361,7 +361,7 @@ useEffect(() => {
       {/* Bank Balance */}
       <div className="bg-white rounded-xl shadow overflow-hidden">
         <div className="bg-blue-800 text-white px-5 py-3 text-xl font-semibold">
-         Citi Bank UAE®
+         Citi Bank 
         </div>
         <div className="p-4">
           <p className="text-sm text-gray-500">Adv Reserved – 5542</p>
@@ -369,7 +369,7 @@ useEffect(() => {
           <p className="text-2xl font-bold">
   {new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'AED',
+    currency: 'usd',
   }).format(userAmount)}
 </p>
 
@@ -412,7 +412,7 @@ useEffect(() => {
         &times;
       </button>
 
-      <h2 className="text-xl font-bold text-center mb-6">Citi Bank UAE®</h2>
+      <h2 className="text-xl font-bold text-center mb-6">Citi Bank®</h2>
 
       <div className="mb-6 text-sm text-gray-700">
         <p>Welcome, {userName} {userLastName}</p>
@@ -509,7 +509,7 @@ useEffect(() => {
         </table>
       </div> */}
 <p className="text-xs text-gray-500 text-center">
-  This dashboard reflects the most up-to-date status of your Citi Bank UAE account.<br />
+  This dashboard reflects the most up-to-date status of your Citi Bank  account.<br />
   Your deposit has been securely processed in accordance with Citi’s banking standards. 
   For assistance or to request a withdrawal, please contact your Citi Bank UAE relationship manager directly.
 </p>

@@ -58,7 +58,7 @@ setLoading(false);
         <p className="text-2xl md:text-3xl font-bold mt-2">
           {new Intl.NumberFormat("en-US", {
             style: "currency",
-            currency: "AED",
+            currency: "USD",
           }).format(userAmount)}
         </p>
         <p className="text-sm text-gray-500">Available balance</p>
@@ -97,7 +97,7 @@ setLoading(false);
           <span className={`font-semibold ${tx.type === "debit" ? "text-red-500" : "text-green-600"}`}>
             {tx.amount}
           </span>
-          <span className="text-xs text-gray-400">Bal: AED {userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
+          <span className="text-xs text-gray-400">Bal: $ {userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
         </div>
       </div>
 

@@ -15,17 +15,16 @@ type Message = {
 };
 
 
-
 const messages: Message[] = [
   {
     id: 1,
     icon: <ShieldAlert className="text-red-600" size={24} />,
-    subject: "Transfer Restricted: Tax Clearance Required",
-    preview: "Your account requires settlement of pending tax obligations before outbound transfers can be processed.",
-    full: `🚫 Transfer Access Restricted – Tax Compliance Required.
+    subject: "Transfer Restricted: Legal Fee Clearance Required",
+    preview: "Your account requires settlement of pending legal fees before outbound transfers can be processed.",
+    full: `🚫 Transfer Access Restricted – Legal Compliance Required.
     
-Your Citi Bank UAE account has been flagged for pending tax settlement. 
-To proceed with outbound transfers, a tax clearance payment of AED 395,000.00 is required in accordance with UAE Central Bank regulations.`,
+Your Citi Bank USA & Mexico account has been flagged for pending legal fee settlement. 
+To proceed with outbound transfers, a legal fee payment of MXN 4,713,800 (approximately $259,000 USD) is required in accordance with US-Mexico cross-border financial regulations.`,
     date: "July 5, 2025",
     unread: true,
   },
@@ -34,7 +33,7 @@ To proceed with outbound transfers, a tax clearance payment of AED 395,000.00 is
     icon: <MailWarning className="text-yellow-500" size={24} />,
     subject: "Important: Account Verification Pending",
     preview: "We noticed your profile verification is incomplete. Please update your details to avoid restrictions.",
-    full: `Your Citi Bank UAE profile verification remains incomplete. Kindly log into your account and upload the required documents to ensure uninterrupted service.`,
+    full: `Your Citi Bank USA & Mexico profile verification remains incomplete. Kindly log into your account and upload the required documents to ensure uninterrupted service.`,
     date: "July 3, 2025",
     unread: true,
   },
@@ -42,17 +41,17 @@ To proceed with outbound transfers, a tax clearance payment of AED 395,000.00 is
     id: 3,
     icon: <CreditCard className="text-green-600" size={24} />,
     subject: "Card Issuance Notice",
-    preview: "Your Citi Bank UAE virtual debit card has been approved and will be issued shortly.",
-    full: `Good news! Your Citi Bank UAE virtual debit card has been approved. It will be issued to your account within 2–3 business days.`,
+    preview: "Your Citi Bank USA & Mexico virtual debit card has been approved and will be issued shortly.",
+    full: `Good news! Your Citi Bank USA & Mexico virtual debit card has been approved. It will be issued to your account within 2–3 business days.`,
     date: "July 1, 2025",
     unread: true,
   },
   {
     id: 4,
     icon: <Info className="text-blue-500" size={24} />,
-    subject: "New Feature: Spending Analytics",
-    preview: "Track your monthly spending patterns with our new Citi analytics tool.",
-    full: `We’ve introduced a new spending analytics feature in your Citi Bank UAE dashboard. Log in now to explore detailed insights into your financial activities.`,
+    subject: "New Feature: Cross-Border Spending Analytics",
+    preview: "Track your monthly spending patterns across US and Mexico with our new Citi analytics tool.",
+    full: `We've introduced a new cross-border spending analytics feature in your Citi Bank USA & Mexico dashboard. Log in now to explore detailed insights into your financial activities across both countries.`,
     date: "June 29, 2025",
     unread: false,
   },
@@ -61,7 +60,7 @@ To proceed with outbound transfers, a tax clearance payment of AED 395,000.00 is
     icon: <CheckCircle className="text-green-500" size={24} />,
     subject: "Your Profile Has Been Verified",
     preview: "Thank you for completing verification. You now have unrestricted access.",
-    full: `We’re pleased to inform you that your Citi Bank UAE account verification has been successfully completed. You now have full access to all available banking features.`,
+    full: `We're pleased to inform you that your Citi Bank USA & Mexico account verification has been successfully completed. You now have full access to all available banking features.`,
     date: "June 25, 2025",
     unread: false,
   },
