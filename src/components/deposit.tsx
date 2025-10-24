@@ -49,7 +49,7 @@ const [userAmount, setUserAmount] = useState<number>(0);
                 <span className="material-icons text-blue-500">check_circle</span>
               </div>
               <div className="ml-4">
-                <p className="text-xl font-semibold">AED 998.00</p>
+                <p className="text-xl font-semibold">$998.00</p>
                 <p className="text-sm text-gray-500">Jan 1 2020 - {currentDate}</p>
               </div>
             </div>
@@ -64,7 +64,7 @@ const [userAmount, setUserAmount] = useState<number>(0);
                 <span className="material-icons text-red-500">pie_chart</span>
               </div>
               <div className="ml-4">
-              <p className="text-xl font-semibold">AED 1,000,000.00</p>
+              <p className="text-xl font-semibold">$1,000,000.00</p>
 
                 <p className="text-sm text-gray-500">July 3 2025</p>
               </div>
@@ -87,7 +87,7 @@ const [userAmount, setUserAmount] = useState<number>(0);
                 <span className="material-icons text-red-500">savings</span>
               </div>
               <div className="ml-4">
-              <p className="text-xl font-semibold">AED 998.25</p>
+              <p className="text-xl font-semibold">$998.25</p>
 
                 <p className="text-sm text-gray-500">
                     1% weekly

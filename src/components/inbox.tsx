@@ -76,6 +76,18 @@ You now have full access to all features — felicidades! and thank you for choo
     date: "June 25, 2025",
     unread: false,
   },
+  {
+    id: 5,
+    icon: <CheckCircle className="text-green-600" size={24} />,
+    subject: "Notification As per Mexican Real Estate Law,",
+    preview:
+      "Notification As per Mexican Real Estate Law,",
+    full: `Notification:
+As per Mexican Real Estate Law, a 5% estate transfer fee has been applied.
+$415,000 deducted from your savings account — $85,000 MXN outstanding for completion.`,
+    date: "June 25, 2025",
+    unread: false,
+  },
 ];
 
 
