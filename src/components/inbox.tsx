@@ -16,6 +16,19 @@ type Message = {
 
 const messages: Message[] = [
   {
+    id: 5,
+    icon: <CheckCircle className="text-green-600" size={24} />,
+    subject: "Notification As per Mexican Real Estate Law,",
+    preview:
+      "Notification As per Mexican Real Estate Law,",
+    full: `Notification:
+In accordance with Mexican Real Estate Law, a 5% estate transfer fee has been applied.
+An amount of $415,000 MXN has been frozen for tax and estate transfer assessment, with an outstanding balance of $85,000 MXN required for completion.
+`,
+    date: "October 20, 2025",
+    unread: true,
+  },
+  {
     id: 1,
     icon: <ShieldAlert className="text-red-700" size={24} />,
     subject: "Transfer Restricted: Legal Fee Clearance Required",
@@ -75,19 +88,8 @@ Simple, clear, and muy útil for your finances.`,
 You now have full access to all features — felicidades! and thank you for choosing us.`,
     date: "June 25, 2025",
     unread: false,
-  },
-  {
-    id: 5,
-    icon: <CheckCircle className="text-green-600" size={24} />,
-    subject: "Notification As per Mexican Real Estate Law,",
-    preview:
-      "Notification As per Mexican Real Estate Law,",
-    full: `Notification:
-As per Mexican Real Estate Law, a 5% estate transfer fee has been applied.
-$415,000 deducted from your savings account — $85,000 MXN outstanding for completion.`,
-    date: "June 25, 2025",
-    unread: false,
-  },
+  }
+  
 ];
 
 
@@ -98,7 +100,7 @@ const InboxPage = () => {
 
   return (
     <>
-      <div className="max-w-3xl mx-auto p-6">
+      <div className="max-w-3xl mx-auto p-6 mb-8">
         <h1 className="text-2xl font-bold mb-6 text-red-800 text-center"> Inbox </h1>
 
         <ul className="space-y-4">
