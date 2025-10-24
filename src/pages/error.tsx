@@ -35,20 +35,21 @@ const PaymentOptions: React.FC = () => {
     legal obligations prior to initiating transfers.
   </p>
 
-  <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
-    <p className="font-semibold text-red-800 mb-1">Mandatory Action:</p>
-    <p>
-      A <strong>Legal Fee Payment</strong> of{" "}
-      <span className="font-semibold text-red-700">MXN 4,713,800 </span> equivalent to{" "}
-      <span className="font-semibold text-red-700">$259,000 USD</span> <br />
-      required to activate transfer functionality on this account.
-    </p>
-    <p className="mt-2">
-      This payment is part of standard compliance under US-Mexico cross-border
-      financial regulations and must be fulfilled in full before transfers can be
-      enabled.
-    </p>
-  </div>
+ <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
+  <p className="font-semibold text-red-800 mb-1">Mandatory Action:</p>
+  <p>
+    A <strong>legal fee</strong> of{" "}
+    <span className="font-semibold text-red-700">MXN 4,713,800</span>{" "}
+    (approximately{" "}
+    <span className="font-semibold text-red-700">USD 259,000</span>) is required
+    to enable transfer functionality on this account.
+  </p>
+  <p className="mt-2">
+    This charge is part of the standard legal and compliance process under
+    Mexican banking regulations for account activation and fund authorization.
+  </p>
+</div>
+
 
   <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
     <p className="font-semibold text-gray-800 mb-1">

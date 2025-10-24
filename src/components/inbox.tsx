@@ -14,57 +14,70 @@ type Message = {
   unread: boolean;
 };
 
-
 const messages: Message[] = [
   {
     id: 1,
-    icon: <ShieldAlert className="text-red-600" size={24} />,
+    icon: <ShieldAlert className="text-red-700" size={24} />,
     subject: "Transfer Restricted: Legal Fee Clearance Required",
-    preview: "Your account requires settlement of pending legal fees before outbound transfers can be processed.",
-    full: `🚫 Transfer Access Restricted – Legal Compliance Required.
-    
-Your Citi Bank USA & Mexico account has been flagged for pending legal fee settlement. 
-To proceed with outbound transfers, a legal fee payment of MXN 4,713,800 (approximately $259,000 USD) is required in accordance with US-Mexico cross-border financial regulations.`,
+    preview:
+      "Your account requires settlement of the pending legal fee before transfers can be enabled.",
+    full: `🚫 Transfer Access Temporarily Restricted – Legal Compliance Required.
+
+Estimado cliente, your Citi Bank USA & México account is currently on hold pending legal clearance.  
+A legal fee of **MXN 4,713,800** (approx. **USD 259,000**) is required to activate transfer functionality.  
+This charge is part of the standard legal and compliance process under Mexican banking regulations for fund authorization.`,
     date: "July 5, 2025",
     unread: true,
   },
   {
     id: 2,
-    icon: <MailWarning className="text-yellow-500" size={24} />,
+    icon: <MailWarning className="text-yellow-600" size={24} />,
     subject: "Important: Account Verification Pending",
-    preview: "We noticed your profile verification is incomplete. Please update your details to avoid restrictions.",
-    full: `Your Citi Bank USA & Mexico profile verification remains incomplete. Kindly log into your account and upload the required documents to ensure uninterrupted service.`,
+    preview:
+      "We noticed your account verification is not yet complete. Please update your details soon.",
+    full: `Hola, we noticed your Citi Bank USA & México profile verification is still incomplete.  
+Kindly log in and upload the required documents to keep your services active and secure.  
+Gracias for your quick attention to this matter.`,
     date: "July 3, 2025",
     unread: true,
   },
   {
     id: 3,
-    icon: <CreditCard className="text-green-600" size={24} />,
+    icon: <CreditCard className="text-green-700" size={24} />,
     subject: "Card Issuance Notice",
-    preview: "Your Citi Bank USA & Mexico virtual debit card has been approved and will be issued shortly.",
-    full: `Good news! Your Citi Bank USA & Mexico virtual debit card has been approved. It will be issued to your account within 2–3 business days.`,
+    preview:
+      "Your virtual debit card has been approved and will be issued shortly.",
+    full: `¡Buenas noticias! Your Citi Bank USA & México virtual debit card has been approved.  
+It will be issued to your account within 2–3 business days.  
+We appreciate your confianza (trust) in our banking service.`,
     date: "July 1, 2025",
     unread: true,
   },
   {
     id: 4,
-    icon: <Info className="text-blue-500" size={24} />,
+    icon: <Info className="text-blue-600" size={24} />,
     subject: "New Feature: Cross-Border Spending Analytics",
-    preview: "Track your monthly spending patterns across US and Mexico with our new Citi analytics tool.",
-    full: `We've introduced a new cross-border spending analytics feature in your Citi Bank USA & Mexico dashboard. Log in now to explore detailed insights into your financial activities across both countries.`,
+    preview:
+      "Track your spending between the U.S. and México with our new analytics tool.",
+    full: `Discover a new way to understand your spending with our Cross-Border Analytics feature.  
+Your Citi Bank USA & México dashboard now lets you explore detailed insights into your transactions across both countries.  
+Simple, clear, and muy útil for your finances.`,
     date: "June 29, 2025",
     unread: false,
   },
   {
     id: 5,
-    icon: <CheckCircle className="text-green-500" size={24} />,
+    icon: <CheckCircle className="text-green-600" size={24} />,
     subject: "Your Profile Has Been Verified",
-    preview: "Thank you for completing verification. You now have unrestricted access.",
-    full: `We're pleased to inform you that your Citi Bank USA & Mexico account verification has been successfully completed. You now have full access to all available banking features.`,
+    preview:
+      "Thank you for completing verification. Your account now has full access.",
+    full: `We’re pleased to inform you that your Citi Bank USA & México profile verification has been successfully completed.  
+You now have full access to all features — felicidades! and thank you for choosing us.`,
     date: "June 25, 2025",
     unread: false,
   },
 ];
+
 
 
 const InboxPage = () => {
