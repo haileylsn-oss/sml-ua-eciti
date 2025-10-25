@@ -388,7 +388,7 @@ const [showViewModal, setShowViewModal] = useState(false);
          Citi Bank 
         </div>
         <div className="p-4">
-          <p className="text-sm text-gray-500">Investment – Bullion holdings</p>
+          <p className="text-sm text-gray-500">Investment – Bullion Holdings</p>
           <div className="flex justify-between items-center mt-1">
           <p className="text-2xl font-bold">
   {new Intl.NumberFormat('en-US', {
