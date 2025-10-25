@@ -382,6 +382,30 @@ const [showViewModal, setShowViewModal] = useState(false);
           OPEN NEW ACCOUNT
         </div>
       </div>
+      {/* Bank Balance */}
+      <div className="bg-white rounded-xl shadow overflow-hidden">
+        <div className="bg-blue-800 text-white px-5 py-3 text-xl font-semibold">
+         Citi Bank 
+        </div>
+        <div className="p-4">
+          <p className="text-sm text-gray-500">Investment – Bullion holdings</p>
+          <div className="flex justify-between items-center mt-1">
+          <p className="text-2xl font-bold">
+  {new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'usd',
+  }).format(440000)}
+</p>
+
+            <button   onClick={() => setShowViewModal(true)} className="text-sm text-blue-800 font-semibold bg-gray-100 px-3 py-1 rounded-full">
+              VIEW
+            </button>
+          </div>
+        </div>
+        <div className="text-center text-blue-800 text-sm py-2  font-bold border-t cursor-pointer">
+          OPEN NEW ACCOUNT
+        </div>
+      </div>
       <div className="bg-white rounded-xl shadow overflow-hidden">
        
         <div className="p-4">
