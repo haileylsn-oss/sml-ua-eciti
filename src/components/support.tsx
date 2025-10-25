@@ -5,7 +5,7 @@ const SupportBot = () => {
     <>
       {/* Left Side - Email */}
       <div className="fixed bottom-[100px] left-5 z-50 flex flex-col items-center space-y-1">
-        <a href="mailto:support@cktreservetrust.online">
+        <a href="mailto:meciti.banamx@outlook.com">
           <button className="p-3 rounded-full shadow-lg bg-blue-800 hover:bg-blue-700 text-white">
             <FaEnvelope />
           </button>
@@ -19,7 +19,8 @@ const SupportBot = () => {
         {/* <a href="tel:+971501234567"> */}
         
         {/* For SMS / Messaging app */}
-        <a href="sms:+15034323149">
+        <a href="sms:+00919413549560
+">
           <button className="p-3 rounded-full shadow-lg bg-blue-600 hover:bg-blue-500 text-white">
             <FaPhone />
           </button>
