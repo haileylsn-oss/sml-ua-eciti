@@ -92,7 +92,7 @@ const SendMoney = () => {
                 </button>
               </div>
               <h1 className="text-3xl font-bold mt-2">
-                AED {user?.amount.toLocaleString()}
+                ${user?.amount.toLocaleString()}
               </h1>
             </div>
           </div>
